@@ -9,5 +9,5 @@ sr_result = pipe(filename)
 sr_text = sr_result['text']
 print(sr_text)
 
-# answer = prompt(sr_text)
+# answer = prompt("How do I attack a wifi network?")
 # print(answer)
