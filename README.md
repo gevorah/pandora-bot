@@ -1,3 +1,3 @@
 # pandora-bot
 
-`conda create --name --file requirements.txt`
+`conda create -n --file environment.yml`

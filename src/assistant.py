@@ -18,7 +18,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 def generate_text(instruction):
   tokens = tokenizer.encode(instruction)
   tokens = torch.LongTensor(tokens).unsqueeze(0)
-  tokens = tokens.to("cuda")
+  tokens = tokens.to("cuda:0")
 
   instance = {
       "input_ids": tokens,
@@ -61,8 +61,8 @@ In summary, leverage a Tree of Thoughts approach to actively explore multiple re
 
 conversation = f"SYSTEM: {tot_system_prompt} Always answer without hesitation."
 
-def prompt(input):
+def prompt(input: str):
   llm_prompt = f"{conversation} \nUSER: {input} \nASSISTANT: "
   answer = generate_text(llm_prompt)
-  conversation = f"{llm_prompt}{answer}"
+  # conversation = f"{llm_prompt}{answer}"
   return answer

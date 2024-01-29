@@ -209,7 +209,14 @@ dependencies:
   - zstd=1.5.5=h12be248_0
   - pip:
       - bitsandbytes==0.41.0
+      - cramjam==2.8.1
+      - exllamav2==0.0.12+cu121
+      - fastparquet==2023.10.1
+      - ninja==1.11.1.1
+      - protobuf==4.25.2
+      - pygments==2.17.2
       - scipy==1.12.0
+      - sentencepiece==0.1.99
       - torchaudio==2.1.2
       - torchvision==0.16.2
-prefix: C:\Users\gevorah\miniconda3\envs\pandora-bot
+      - websockets==12.0
